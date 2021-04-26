@@ -13,9 +13,7 @@ CREATE TABLE IF NOT EXISTS `contactinfo` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `contactinfo`
---
+
 
 INSERT INTO `contactinfo` (`id`, `name`, `email`, `message`) VALUES
 (1, 'Depardieu Jean', 'Faissal@hotmail.com', 'Bonjour'),
@@ -23,11 +21,8 @@ INSERT INTO `contactinfo` (`id`, `name`, `email`, `message`) VALUES
 (7, 'Botineau Laure', 'sahraoui921@hotmail.com', 'Salut !!!!!!!!!!!!!!!'),
 (8, 'Delacroix', 'Eugene@hotmail.com', 'azertyuilo');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `password_recover`
---
+
 
 DROP TABLE IF EXISTS `password_recover`;
 CREATE TABLE IF NOT EXISTS `password_recover` (
@@ -38,9 +33,6 @@ CREATE TABLE IF NOT EXISTS `password_recover` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `password_recover`
---
 
 INSERT INTO `password_recover` (`id`, `token_user`, `token`, `date_recover`) VALUES
 (1, '', '23523bb888ebb8afb5f209bcef2e942b92a310bc68d92d4c', '2021-03-20 20:29:55'),
@@ -49,11 +41,7 @@ INSERT INTO `password_recover` (`id`, `token_user`, `token`, `date_recover`) VAL
 (4, '', 'd48fdcf349877d09a6c8d5967f0c71295644798da5c37c70', '2021-03-20 20:39:42'),
 (5, '', 'c3736403ed45f2138419cd17e9c9382132e677095630d294', '2021-03-21 18:24:43');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `tbl_comment`
---
 
 DROP TABLE IF EXISTS `tbl_comment`;
 CREATE TABLE IF NOT EXISTS `tbl_comment` (
@@ -65,9 +53,7 @@ CREATE TABLE IF NOT EXISTS `tbl_comment` (
   PRIMARY KEY (`comment_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `tbl_comment`
---
+
 
 INSERT INTO `tbl_comment` (`comment_id`, `parent_comment_id`, `comment`, `comment_sender_name`, `date`) VALUES
 (29, 0, 'Bonne pÃƒÆ’Ã‚Â©dagogie !!!!', 'Chouaki ', '2021-03-05 13:21:02'),
@@ -80,11 +66,7 @@ INSERT INTO `tbl_comment` (`comment_id`, `parent_comment_id`, `comment`, `commen
 (36, 0, 'azertugfepd', 'AZERTY', '2021-04-16 00:20:15'),
 (37, 0, 'azertyuopjhgfdxfcgvhbjnk,l', 'AZERTY', '2021-04-16 00:21:42');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `utilisateurs`
---
 
 DROP TABLE IF EXISTS `utilisateurs`;
 CREATE TABLE IF NOT EXISTS `utilisateurs` (
@@ -97,9 +79,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `utilisateurs`
---
+
 
 INSERT INTO `utilisateurs` (`id`, `pseudo`, `email`, `password`, `ip`, `date_inscription`) VALUES
 (2, 'Kirysks', 'kiry@hotmail.com', '$2y$12$MrCyP7MtLXBRbwoPTIDmHeldlh416b7sbles680xDQMUkVxdEj/SG', '::1', '2021-03-20 19:50:18'),
@@ -114,7 +94,3 @@ INSERT INTO `utilisateurs` (`id`, `pseudo`, `email`, `password`, `ip`, `date_ins
 (11, 'Spenzoooo', 'spenzo@hotmail.com', '$2y$12$QT5GZsW3HZa5m5VohcFuDuc94v66vLjb1UjpTALnN8P6KOhBD7HWm', '::1', '2021-04-16 02:23:31'),
 (12, 'Chouaki75017', 'chouaki@yahoo.com', '$2y$12$6PKUB60qlv.M5LdXcDgSheGXdAMUZtSg1fVvX0xmUuZIpLyhZ6iqW', '::1', '2021-04-16 02:33:08');
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
