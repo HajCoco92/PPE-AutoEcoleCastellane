@@ -1,6 +1,6 @@
-Drop database if exists forum;
-Create database forum;
-Use forum;
+Drop database if exists autoclient;
+Create database autoclient;
+Use autoclient;
 
 
 
