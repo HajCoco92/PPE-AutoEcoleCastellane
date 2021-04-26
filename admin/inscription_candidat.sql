@@ -1,31 +1,6 @@
--- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
---
--- Hôte : 127.0.0.1:3306
--- Généré le : lun. 19 avr. 2021 à 21:51
--- Version du serveur :  5.7.31
--- Version de PHP : 7.3.21
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de données : `inscription_candidat`
---
-
--- --------------------------------------------------------
-
---
--- Structure de la table `code`
---
+Drop database if exists inscription_candidat;
+Create database inscription_candidat;
+Use inscription_candidat;
 
 DROP TABLE IF EXISTS `code`;
 CREATE TABLE IF NOT EXISTS `code` (
@@ -40,18 +15,13 @@ CREATE TABLE IF NOT EXISTS `code` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
---
--- Déchargement des données de la table `code`
---
+
 
 INSERT INTO `code` (`id`, `adresse`, `code_postal`, `ville`, `type_examen`, `nom_candidat`, `prenom_candidat`, `heure`) VALUES
 (6, '20 boulevard du couchant', '92007', 'Nanterre ', 'Permis B ', 'Depardieu', 'Eric', '17:00');
 
 -- --------------------------------------------------------
 
---
--- Structure de la table `conduite`
---
 
 DROP TABLE IF EXISTS `conduite`;
 CREATE TABLE IF NOT EXISTS `conduite` (
@@ -66,18 +36,12 @@ CREATE TABLE IF NOT EXISTS `conduite` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
---
--- Déchargement des données de la table `conduite`
---
+
 
 INSERT INTO `conduite` (`id`, `adresse_con`, `code_postal_con`, `ville_con`, `type_examen_con`, `nom_candidat_con`, `prenom_candidat_con`, `heure_con`) VALUES
 (10, '4 rue des acacias ', '92000', 'Nanterre', 'B ', 'Ettarnichi', 'Faissal', '17:15');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `contact`
---
 
 DROP TABLE IF EXISTS `contact`;
 CREATE TABLE IF NOT EXISTS `contact` (
@@ -90,11 +54,6 @@ CREATE TABLE IF NOT EXISTS `contact` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Structure de la table `login`
---
 
 DROP TABLE IF EXISTS `login`;
 CREATE TABLE IF NOT EXISTS `login` (
@@ -104,9 +63,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `login`
---
+
 
 INSERT INTO `login` (`id`, `username`, `password`) VALUES
 (13, 'admin', '0c7540eb7e65b553ec1ba6b20de79608'),
@@ -116,11 +73,7 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 (18, 'azerty123@hotmail.fr', '3b004ac6d8a602681f5ee3587c924855679e21d9'),
 (19, 'azertyuiop@hotmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `moniteur`
---
 
 DROP TABLE IF EXISTS `moniteur`;
 CREATE TABLE IF NOT EXISTS `moniteur` (
@@ -132,9 +85,7 @@ CREATE TABLE IF NOT EXISTS `moniteur` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4;
 
---
--- Déchargement des données de la table `moniteur`
---
+
 
 INSERT INTO `moniteur` (`id`, `nom`, `prenom`, `mail`, `tel`) VALUES
 (50, 'Ettarnichi', 'Faissal', 'faissal@hotmail.com', '0769175371'),
@@ -143,11 +94,7 @@ INSERT INTO `moniteur` (`id`, `nom`, `prenom`, `mail`, `tel`) VALUES
 (53, 'Depardieu', 'Jeanne', 'jeanne928@yahoo.com', '0785459658'),
 (55, 'Alaoui', 'Abdel', 'abdel.alaoui@outlook.com', '0652369856');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `moto`
---
 
 DROP TABLE IF EXISTS `moto`;
 CREATE TABLE IF NOT EXISTS `moto` (
@@ -159,10 +106,6 @@ CREATE TABLE IF NOT EXISTS `moto` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `moto`
---
-
 INSERT INTO `moto` (`id`, `modele`, `annee`, `immatriculation`, `kilometrage`) VALUES
 (3, 'kawazaki z800', '2018', 'QH-082-QS', '25000km'),
 (4, 'kawazaki z800', '2014', 'SJ-092-JS', '98000km'),
@@ -170,11 +113,7 @@ INSERT INTO `moto` (`id`, `modele`, `annee`, `immatriculation`, `kilometrage`) V
 (6, 'kawazaki z800', '2005', 'HC-081-SB', '150487km'),
 (7, 'kawazaki z800', '2012', 'QS-560-SD', '26555km');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `planning`
---
 
 DROP TABLE IF EXISTS `planning`;
 CREATE TABLE IF NOT EXISTS `planning` (
@@ -195,11 +134,7 @@ CREATE TABLE IF NOT EXISTS `planning` (
 INSERT INTO `planning` (`id`, `nom_candidat`, `prenom_candidat`, `intitule_lecon`, `datep`, `heure`, `heuref`) VALUES
 (30, 'Ettarnichi', 'Faissal', 'Lecon1 ', '2020-02-10', '10:00', '15:00');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `users`
---
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
@@ -209,18 +144,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `users`
---
+
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
 (1, 'admin', 'admin');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `utilisateurs`
---
 
 DROP TABLE IF EXISTS `utilisateurs`;
 CREATE TABLE IF NOT EXISTS `utilisateurs` (
@@ -239,18 +168,11 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8mb4;
 
---
--- Déchargement des données de la table `utilisateurs`
---
 
 INSERT INTO `utilisateurs` (`id`, `nom`, `prenom`, `sexe`, `date_de_naissance`, `adresse`, `code_postal`, `ville`, `telephone`, `adresse_mail`, `etablissement`, `formule`) VALUES
 (79, 'Dupont', 'Martin', 'M', '2000-01-15', '4 rue des acacias ', 92000, 'Nanterre', '7777777777', 'Martin@hotmail.com', 'Iris', 'Permis A');
 
--- --------------------------------------------------------
 
---
--- Structure de la table `voiture`
---
 
 DROP TABLE IF EXISTS `voiture`;
 CREATE TABLE IF NOT EXISTS `voiture` (
@@ -262,9 +184,7 @@ CREATE TABLE IF NOT EXISTS `voiture` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `voiture`
---
+
 
 INSERT INTO `voiture` (`id`, `modele`, `annee`, `immatriculation`, `kilometrage`) VALUES
 (5, 'Citroen C3', '20012', 'CZ-071-YP', '63000km'),
@@ -275,6 +195,4 @@ INSERT INTO `voiture` (`id`, `modele`, `annee`, `immatriculation`, `kilometrage`
 (13, 'ds3', '2018', 'AZ-785-QV', '25555km');
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
