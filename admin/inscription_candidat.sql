@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS `code` (
 INSERT INTO `code` (`id`, `adresse`, `code_postal`, `ville`, `type_examen`, `nom_candidat`, `prenom_candidat`, `heure`) VALUES
 (6, '20 boulevard du couchant', '92007', 'Nanterre ', 'Permis B ', 'Depardieu', 'Eric', '17:00');
 
--- --------------------------------------------------------
 
 
 DROP TABLE IF EXISTS `conduite`;
