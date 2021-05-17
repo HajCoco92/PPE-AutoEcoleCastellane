@@ -23,12 +23,17 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link " href="PermisA.php">Permis A </a>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Permis
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="PermisA.php">Permis A </a></li>
+                  <li><a class="dropdown-item" href="PermisB.php">Permis B </a></li>
+                </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="PermisB.php">Permis B </a>
-              </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="AAC.php">ACC</a>
               </li>
@@ -39,14 +44,19 @@
                 <a class="nav-link" href="Contact/index.php">Contact</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="Commentaire/index.php">Avis</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="espacep/index.php">Mon espace</a>
               </li>
+              
               
 
             </ul>
           </div>
         </div>
       </nav>
+
         <script type="text/javascript" src="mobile.js"></script>
         
         <br>
