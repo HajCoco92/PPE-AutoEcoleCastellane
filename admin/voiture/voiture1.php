@@ -14,6 +14,7 @@ if (isset($_GET['edit'])) {
 	$annee = $record['annee'];
 	$immatriculation = $record['immatriculation'];
     $kilometrage = $record['kilometrage'];
+	$photo = $record['photo'];
 
 	$id = $record['id'];
 
@@ -90,6 +91,7 @@ if (isset($_GET['edit'])) {
 			<th>Annee</th>
 			<th>Immatriculation</th>
 			<th>Kilometrage</th>
+			<th>Photo</th>
 			<th colspan="4">Action</th>
 		</tr>
 	</thead>
@@ -100,6 +102,7 @@ if (isset($_GET['edit'])) {
 	<td><?php echo $row['annee']; ?> </td>
 	<td><?php echo $row['immatriculation']; ?> </td>
 	<td><?php echo $row['kilometrage']; ?> </td>
+	<td><?php echo $row['photo']; ?> </td>
 	<td>
 	    <a class="edit_btn" href="voiture1.php?edit=<?php echo $row['id']; ?>">Modifier</a>
 	</td>
@@ -116,7 +119,7 @@ if (isset($_GET['edit'])) {
 <imput type="hidden" name="id" value="<?php echo $id; ?>"> 
 		<div class="input-group">
 			<label>Modele</label>
-			<input type="text" required="required" name="modele" value="<?php echo $modele; ?>">
+			<input type="text" pattern="[a-z]" required="required" name="modele" value="<?php echo $modele; ?>">
 		</div>
 
 
@@ -133,10 +136,16 @@ if (isset($_GET['edit'])) {
 			<input type="text" required="required" name="immatriculation" value="<?php echo $immatriculation; ?>">
 		</div>
 
-<div class="input-group">
+		<div class="input-group">
 			<label>Kilometrage</label>
 			<input type="text" required="required" name="kilometrage" value="<?php echo $kilometrage; ?>">
+		</div> 
+	
+		<div class="input-group">
+			<label>Photo</label>
+			<input type="file" required="required" name="photo" value="<?php echo $photo; ?>">
 		</div>
+	
 		<input type="hidden" name="id" value="<?= isset($_GET['edit']) ? $_GET['edit'] : ''; ?>">
 
 
